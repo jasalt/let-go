@@ -41,6 +41,10 @@ publishing a complete file without exposing a partial write:
 (os/rename "result.edn.tmp" "result.edn")
 ```
 
+## Private credential files
+
+The lower-level `syscall` namespace also exposes mode-aware filesystem primitives for applications that must own private local state: `(syscall/mkdir-p path mode)`, `(syscall/write-file path content mode)`, `(syscall/chmod path mode)`, `(syscall/read-file path)`, and `(syscall/rm path)`. On Unix, callers should create credential directories with mode `0700` and files with `0600`; publish atomically by writing a same-directory temporary file then calling `os/rename`. These primitives deliberately remain generic and contain no authentication policy.
+
 ## Processes and environment
 
 - `(os/sh command & args)` buffers a child process and returns
