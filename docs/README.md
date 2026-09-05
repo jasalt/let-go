@@ -30,7 +30,7 @@ A subdir is earned when a cluster of related docs justifies one; one-off cross-c
 ## Topical map
 
 | Concern | Doc(s) |
-|---|---|
+| --- | --- |
 | Design contracts, CI gates, interop schema | `contribution-policy.md` |
 | Phase skeleton, success metrics | `master-plan.md` |
 | Calling convention, allocation, TCO | `design/vm-performance-optimization.md` |
@@ -70,6 +70,7 @@ A subdir is earned when a cluster of related docs justifies one; one-off cross-c
 | IR fixup / link pass | `design/els2023-ir-fixup-audit.md` |
 | Parallel IR lowering + determinism | `design/parallel-lowering-and-type-cache.md` |
 | Runtime I/O, host decoupling | `design/runtime-io-host-decoupling.md` |
+| Babashka.fs support diagnosis | `design/babashka-fs-support.md` |
 | Terminal resize wake contract | `design/terminal-resize-wake.md` |
 | Off-goroutine execution context threading | `design/exec-context-threading.md` |
 
